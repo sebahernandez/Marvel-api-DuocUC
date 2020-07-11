@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+body{
+    background:#000;
+    margin:0;
+    padding:0;
+}
+
+h3{
+  font-family: 'Anton', sans-serif;
+  font-size:3rem;
+  letter-spacing: 1pt;
+  
+}
+p{
+  font-family: 'PT Sans Narrow', sans-serif;
+  letter-spacing: 1pt;
+}
+
+/* Header Video */ 
+
+header {
+    position: relative;
+    background-color: black;
+    height: 75vh;
+    min-height: 25rem;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  header video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+  }
+  
+  header .container {
+    position: relative;
+    z-index: 2;
+  }
+  
+  header .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.5;
+    z-index: 1;
+  }
+  
+  @media (pointer: coarse) and (hover: none) {
+    header {
+      background: url('https://source.unsplash.com/XT5OInaElMw/1600x900') black no-repeat center center scroll;
+    }
+    header video {
+      display: none;
+    }
+  }
+
+/* Lista de personajes */ 
+
+section.lista-personajes{
+    background-color:#fff;
+}
+
+.buscador {
+    background-color: #000;
+}
+
+.search-bg{
+    background-color:#0a0a0a;
+}
+
+td.editar button{
+    color:#fff;
+    background-color: rgb(0, 176, 182);
+    border:0px;
+    padding:10px 18px;
+    position: relative;
+}
+
+td.editar button::before{
+    content: "\f044";
+    font-family: FontAwesome;
+    position: relative;
+    padding-right: 2px;
+}
+
+
+td.eliminar button{
+    color:#fff;
+    background-color: rgb(241, 0, 112);
+    border:0px;
+    padding:10px 18px;
+}
+
+td.eliminar button::before{
+    content: "\f014";
+    font-family: FontAwesome;
+    position: relative;
+    padding-right: 2px;
+}
+
+/* Cards Efectos */ 
+
+.card{
+    border:0px;
+    border-radius:0px;
+    background-color:transparent;
+    box-shadow: 0 19px 38px rgba(65, 65, 65, 0.3), 0 15px 12px rgba(0,0,0,0.22);
+}
+
+.card-body:before{
+    content: '';
+    background: #e62429;
+    bottom: 100%;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    transition-timing-function: cubic-bezier(0.75,0,0.125,1);
+    transition: transform .3s;
+    width: 100%;
+    z-index: -1;
+}
+
+.card-body{
+    overflow: hidden;
+    background: #202020;
+    color: #fff;
+    padding: 20px;
+    height: 129px;
+    border: 0px;
+    vertical-align: middle;
+    position: relative;
+    z-index: 1;
+}
+
+
+.card-columns {
+    -webkit-column-count: 6;
+    -moz-column-count: 6;
+    column-count: 6;
+    -webkit-column-gap: 1.25rem;
+    -moz-column-gap: 1.25rem;
+    column-gap: 1.25rem;
+    orphans: 1;
+    widows: 1;
+}
+
+.card img{
+    border-bottom: 4px solid #e62429;
+    transition: all .2s linear;
+    transform: scaleX(1);
+    width: 100.1%;
+}
+/* // Cards Efectos */ 
+
+
+@media (max-width:460px){
+  .card-columns {
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+    column-count: 1;
+
+}
+
+}
+
+@media (max-width:760px){
+  .card-columns {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+ 
+}
+}
+
+.iti__flag {background-image: url("img/flags.png");}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .iti__flag {background-image: url("img/flags.png");}
+}
